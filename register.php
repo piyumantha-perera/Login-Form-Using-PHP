@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 
+
+
 <body>
     <div class="container-fluid mt-4">
         <div class="header text-center">
@@ -16,55 +18,57 @@
     </div>
 
 
+    <form action="reg.php" method="post" onSubmit="return validation()">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-md-6 col-sm-6">
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3"></div>
-            <div class="col-md-6 col-sm-6">
-                <form action="" method="POST">
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="First name">
+                            <input type="text" id="fname" name="fname" class="form-control" placeholder="First name">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Last name">
+                            <input type="text" id="lname" name="lname" class="form-control" placeholder="Last name">
                         </div>
                     </div>
 
                     <div class="row mt-2">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="text" id="email" name="email" class="form-control" placeholder="Email">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="DOB">
+                            <input type="text" id="dob" name="dob" class="form-control" placeholder="DOB">
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Password">
+                            <input type="text" id="psw" name="psw" class="form-control" placeholder="Password">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Confirm Password">
+                            <input type="text" id="cpsw" name="cpsw" class="form-control" placeholder="Confirm Password">
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <div class="col-lg-6">
-                            <button type="submit" name="user-submit" class="btn btn-success btn-sm float-right">Register</button>
+                            <button type="submit" name="submit" value="submit" class="btn btn-success btn-sm float-right">Register</button>
+
                         </div>
 
                         <div class="col-lg-6">
                             <button type="reset" class="btn btn-primary btn-sm float-left">Clear</button>
                         </div>
                     </div>
-                </form>
+
+
+                </div>
 
             </div>
 
+
         </div>
-
-
-    </div>
+    </form>
 
 
 
