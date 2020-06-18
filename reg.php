@@ -1,6 +1,10 @@
 <?php
 
-$con = new mysqli("localhost", "root", "", "login") or die("Error" . $con->connect_error);
+
+include 'controllers/db.php';
+
+
+
 if (isset($_POST['submit'])) {
     $first_name = $_POST['fname'];
     $lastname = $_POST['lname'];
@@ -11,7 +15,7 @@ if (isset($_POST['submit'])) {
 
 
     $sqls = "INSERT INTO register(fname,lname,email,dob,psw,cpsw) VALUES('$first_name','$lastname','$email','$dob','$password','$conpassword')";
-    $result = $con->query($sqls) or die($con->error);
+    $result = $DBcon->query($sqls) or die($DBcon->error);
     if ($result === true) {
         echo '<script type="text/javascript">';
         echo 'alert("registeration was Done Successfully.Thank You...");';
